@@ -1,7 +1,7 @@
 #### **Install new ROS package**
-* Clone repo to "/workspace/src"
+* Clone repo to "workspace/src"
 * Install dependencies -> `rosdep install --from-paths src --ignore-src -r -y`
-* Build in "/workspace" -> `catkin_make`
+* Build in "workspace/" -> `catkin_make`
 * Reload ros launch files -> `source devel/setup.bash`
 
 #### **Catkin commands**
@@ -44,7 +44,7 @@ Package consist of nodes that share **similar** functionalities
 cd src
 catkin_create_pkg <new_package> roscpp rospy std_msgs
 cd ..
-catkin_make     #(build in "workspace/src" or "workspace/" after adding new packages)
+catkin_make     #(build in "workspace/" after adding new packages)
 ```
 
 ### **ROS Node**
