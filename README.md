@@ -75,7 +75,7 @@ Publishers run at regular interval within while loop, and service clients are ei
 
 ### **Service Server**
 A ROS node that listen to topic of given message format (.srv) \
-Process recieved messages, then the server will send a response back to the client \
+Process recieved messages, then the server will send a response back to the client
 ```
 server = rospy.Service("service_name", message_type, callback)
 spin()
@@ -98,7 +98,7 @@ Used to store parameters
 * relative_path_under_program_namespace
 * ~private_path (path under node namespace)
 
-Program namespace is set to "/" by default, so it acts like root path. Use `os.environ["ROS_NAMESPACE"] = "/namespace"` before `import rospy` to set a different namespace
+Program namespace is set to "/" by default, so it acts like root path. Use `os.environ["ROS_NAMESPACE"] = "/namespace"` before `import rospy` to set a different namespace. \
 Note that this will affect node name as well since it is relative to namespace of the program. Because `rospy.init_node("/abs_node_name")` with absolute path is **NOT** allowed.
 
 The best option now is to keep namespace of the program as it is being "/", and when using parameter server, just use either absolute path or private path, avoid using "relative_path_under_program_namespace" and setting it with `os.environ["ROS_NAMESPACE"]`
