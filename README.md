@@ -122,5 +122,20 @@ r.sleep()
 Timer and Rate sleep can be used in the same program \
 ex: use Timer to update parameters from paramserver and use Rate sleep to keep publisher running
 
+### **ROS run**
+Run an executable in an arbitrary package from anywhere without having to give its full path
+```
+rosrun <package> <executable> _parameter:=value __name:=name
+```
+
 ### **ROS launch**
-.launch file in XML format for launching multiple ros nodes together
+Launch multiple nodes together with roscore. Can also set custom node name and private parameters for the paramserver. Run with `roslaunch <package> <file.launch>`
+```
+<launch>
+    <include file="$(find pkg-name)/path/filename.launch" />
+
+    <node name="node-name" pkg="pkg-name" type="node.py">
+        <param name="param-name" value="param-val"/>
+	</node>
+</launch>
+```

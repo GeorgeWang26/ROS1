@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="my_first_robot" type="gps_publisher.py" name="gps_publisher" output="screen"/>
+    <node pkg="my_first_robot" type="gps_subscriber.py" name="gps_subscriber" output="screen"/>
+</launch>
